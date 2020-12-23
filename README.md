@@ -21,3 +21,5 @@
 11.)In sidebar.js,In "sidebar__headerRight" div tag, add the  DonutLargeIcon,MoreVertIcon and ChatIcon component under each IconButton component.
 
 12.)Add css styles to sidebar,sidebar__header,sidebar__headerRight,sidebar__headerRight >.MuiSvgIcon-root(to overwrite the material ui icon) in sidebar.css file.
+
+13.)In sidebar.js,In sideebar__search div tag, add div tag with classname as "sidebar__searchContainer"  init.Wrap SearchOutlined icon and input box init.Finally add css styles to sidebar,sidebar__search,sidebar__searchContainer,sidebar__searchContainer > .MuiSvgIcon-root ,sidebar__searchContainer > input in sidebar.css file.
