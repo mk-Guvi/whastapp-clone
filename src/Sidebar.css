@@ -53,3 +53,10 @@
     margin-right: 2vw;
     font-size: 24px !important;/*to overwrite matrial ui font size*/
 }
+
+.sidebar__chats{
+    flex: 1;/*this will cover all the flex-colmns*/
+    background-color: white;
+    overflow: scroll;
+
+}

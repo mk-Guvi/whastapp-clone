@@ -23,3 +23,13 @@
 12.)Add css styles to sidebar,sidebar__header,sidebar__headerRight,sidebar__headerRight >.MuiSvgIcon-root(to overwrite the material ui icon) in sidebar.css file.
 
 13.)In sidebar.js,In sideebar__search div tag, add div tag with classname as "sidebar__searchContainer"  init.Wrap SearchOutlined icon and input box init.Finally add css styles to sidebar,sidebar__search,sidebar__searchContainer,sidebar__searchContainer > .MuiSvgIcon-root ,sidebar__searchContainer > input in sidebar.css file.
+
+14.)create sidebarchat.js and sidebarchat.css file under src folder.create a functional component in sidebarchat.js and import it as a component in sidebar.js under "sidebar__chat" div element.
+
+15.)In sidebar.css,add some styles to sidebar__chats dive element
+
+16.)Add the avatar component in sidebarchat.js under the "sidebarchat" div element.Add add a div element  with class name as "sidebarchat__info" under avatar component.Add src("https://avatars.dicebear.com/4.5/api/male/fds.svg") attribute to the avatar component to show some images on it.
+
+17.)Add useEffect and usestate hooks in sidebarchat.js file that generates  random number whenever the component loads and call it in avatar src
+
+18.)In sidebarchat.css ,add some css styles
