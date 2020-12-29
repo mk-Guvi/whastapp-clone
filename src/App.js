@@ -1,7 +1,7 @@
 import React from "react"
 import './App.css';
 import Sidebar from "./Sidebar";
-
+import Chat from  "./Chat"
 function App() {
   return (
     //BEM Naming convention
@@ -11,6 +11,7 @@ function App() {
        {/* sidebar section
        chat section   */}
        <Sidebar/>
+       <Chat/>
        </div>
     </div>
   );

@@ -37,3 +37,15 @@
 19.)In sidebarchat.js,add a prop(addnewchat) and call the prop in the sidebar.js.create a ternary operator that returns if addnewchat is called in the component(sidebar.js) return the AddNewchat-h2 tag under a div element with onclick attribute(createchat).Else return the div element of exixting one(room name and last message).
 
 20.)In sidebarchat.js,create the function(createChat)  that stores the room name in constant(roomName) for doing Db stuffs when clicked on AddNewChat.
+
+21.)create chat.js file under src and create the Chat functional  component with div element whose className="chat" and call it in app.js
+
+22.)create a chat.css file in src and import it in chat.js file.
+
+23.)In chat.js,Under "chat" div element,create 3 div elements with className as chat__header,chat__body and chat__footer init.
+
+24.)In chat.js,Under "chat__header" div element,use the Avatar componenet and create the 2 div elements with classname "chat__headerInfo" and "chat__headerRight".
+
+25.)iN Chat.js,Use the respective icons on the "chat__headerRight" div element by import its componenets from the materialUi.and in "chat__headerInfo" call the lastseen(p) and roomname(h3) tags init.
+
+26.)In chat.css ,add styles to the header section of chats.
