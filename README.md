@@ -33,3 +33,7 @@
 17.)Add useEffect and usestate hooks in sidebarchat.js file that generates  random number whenever the component loads and call it in avatar src
 
 18.)In sidebarchat.css ,add some css styles
+
+19.)In sidebarchat.js,add a prop(addnewchat) and call the prop in the sidebar.js.create a ternary operator that returns if addnewchat is called in the component(sidebar.js) return the AddNewchat-h2 tag under a div element with onclick attribute(createchat).Else return the div element of exixting one(room name and last message).
+
+20.)In sidebarchat.js,create the function(createChat)  that stores the room name in constant(roomName) for doing Db stuffs when clicked on AddNewChat.
