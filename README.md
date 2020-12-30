@@ -49,3 +49,7 @@
 25.)iN Chat.js,Use the respective icons on the "chat__headerRight" div element by import its componenets from the materialUi.and in "chat__headerInfo" call the lastseen(p) and roomname(h3) tags init.
 
 26.)In chat.css ,add styles to the header section of chats.
+
+27.)In chat.js,In "chat__body" div element ,add p-tag  with classname as "chat__message"(message from receiver) and "chat__reciever"(message to reciver),call a span-tag with calssname="chat__name"(defines the user name).Write a message after the span-tag and create another span-tag with className="chat__timestamp" that defines the time.
+
+28.)In chat.css,Add styles to the chat__body section.

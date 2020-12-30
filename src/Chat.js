@@ -19,7 +19,7 @@ function Chat() {
                  <h3>RoomName</h3>
                  <p>Last Seen...</p>
              </div>
-             
+
                  <div className="chat__headerRight">
                       <IconButton >
                            <SearchOutlined/>
@@ -36,8 +36,15 @@ function Chat() {
              </div>
              
              <div className="chat__body">
+                <p className={`chat__message ${true&&"chat__reciever"}`}>
+                <span className="chat__name">MK</span>
+                    hello message
+                    <span className="chat__timestamp">2:20PM</span>
+                    
+                    </p>
+                    
+             </div> 
 
-             </div>
              <div className="chat__footer">
 
              </div>
