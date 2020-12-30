@@ -53,3 +53,7 @@
 27.)In chat.js,In "chat__body" div element ,add p-tag  with classname as "chat__message"(message from receiver) and "chat__reciever"(message to reciver),call a span-tag with calssname="chat__name"(defines the user name).Write a message after the span-tag and create another span-tag with className="chat__timestamp" that defines the time.
 
 28.)In chat.css,Add styles to the chat__body section.
+
+29.)IN ChAt.js,IN "CHAT__FoOTER" div element,Add InsertEmoticon component ,form tag with onchange(that changes the input values using usestate hook),value,placeholder attributes followed by button with onClick(calls the sendmessage function) attribute init.Finally add the MicIcon componenet below the form.
+
+30.)In chat.css,Add styles to the chat__footer section.
