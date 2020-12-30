@@ -57,3 +57,12 @@
 29.)IN ChAt.js,IN "CHAT__FoOTER" div element,Add InsertEmoticon component ,form tag with onchange(that changes the input values using usestate hook),value,placeholder attributes followed by button with onClick(calls the sendmessage function) attribute init.Finally add the MicIcon componenet below the form.
 
 30.)In chat.css,Add styles to the chat__footer section.
+
+31.)npm i firebase
+
+32.)create the db in cloudfire and create collections init named rooms and add documents as dance room and dev room
+
+33.)In firebase.js,import firebase and add db,firebaseApp,auth, provider contants that is required for firebase connecetions
+
+34.)In sidebar.js,use useeffect  hook that connects the db-collection by importing the db for getting the id and the data available init.Use map function to return the fields of db as sidebarchat component by addding the props key,name and id.call the name and id props in sidebarchat.js file
+
