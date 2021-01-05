@@ -66,3 +66,6 @@
 
 34.)In sidebar.js,use useeffect  hook that connects the db-collection by importing the db for getting the id and the data available init.Use map function to return the fields of db as sidebarchat component by addding the props key,name and id.call the name and id props in sidebarchat.js file
 
+35.)In sidebarchat.js,import the db init from firebase.js file.iN createchat function include the add roomname functionality  which is to be added in db.
+
+36.)Add cleanup funtion(unsubscribe()) in sidebar.js file.

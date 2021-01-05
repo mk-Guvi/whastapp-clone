@@ -13,14 +13,17 @@ import db from "./firebase";
     
 
     useEffect(()=>{
-            db.collection('rooms').onSnapshot(snapshot=>(
-                setRooms(snapshot.docs.map(doc=>({
-                    id:doc.id,
-                    data:doc.data(),
+            const unsubscribe=db.collection('rooms').onSnapshot(snapshot=>(//rooms=collection of the db,snapshot notes the list of elements in db and also its changes in the db
+                setRooms(snapshot.docs.map(doc=>({//snapshot.docs refers to the list of items available in the db
+                    id:doc.id,//getting each id of the data 
+                    data:doc.data(),//getting the data of each id
 
                     })))
             )
             )
+            return()=>{//cleanp function that detaches the snapshot when it is not in use for optimization 
+                unsubscribe()//
+            }
     },[])
 
     return (
@@ -50,7 +53,7 @@ import db from "./firebase";
                 <SidebarChat/>
                 <SidebarChat/> */}
                 {rooms.map(room=>(
-                    <SidebarChat key={room.id} id={room.id} name={room.data.name}/>
+                    <SidebarChat key={room.id} id={room.id} name={room.data.name}/>//room.darta.name refers to the name provided in the db
                 ))}
              
                  
