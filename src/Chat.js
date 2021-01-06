@@ -1,18 +1,31 @@
+import {useParams} from "react-router-dom"
 import React,{useEffect,useState} from 'react'
 import "./Chat.css"
 import {SearchOutlined,MoreVert,AttachFile} from "@material-ui/icons"
 import MicIcon from "@material-ui/icons/Mic"
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon"
 import {Avatar,IconButton} from "@material-ui/core";
-
+import db from "./firebase"
 
 function Chat() {
     const [seed,setSeed]=useState("")
-    const [input,setInput]=useState("")
+    const {roomId}=useParams()//refers the roomid from the url
+    const  [roomName,setRoomName]=useState("")
+   const [input,setInput]=useState("")
+
+   useEffect(()=>{
+       if(roomId){
+           db.collection('rooms').doc(roomId).onSnapshot(snapshot=>(//n rooms collection,using thr roomid of url getting the name of roomid using snapshot
+               setRoomName(snapshot.data().name)
+           ))
+       }
+   },[roomId])//the dependency is roomid obtained from the url
+
     useEffect(() => {//it renders when a component loads
         setSeed(Math.floor(Math.random()*5000))
         }, [])
     
+        
     const sendMessage=(e)=>{
             e.preventDefault()
             console.log("you typed =>",input)
@@ -23,7 +36,7 @@ function Chat() {
              <div className="chat__header">
              <Avatar src={`https://avatars.dicebear.com/4.5/api/male/${seed}.svg`}/>
              <div className="chat__headerInfo">
-                 <h3>RoomName</h3>
+                 <h3>RoomName:{roomName}</h3>{/**getting the room name from the DB */}
                  <p>Last Seen...</p>
              </div>
 

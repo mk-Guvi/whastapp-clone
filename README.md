@@ -69,3 +69,13 @@
 35.)In sidebarchat.js,import the db init from firebase.js file.iN createchat function include the add roomname functionality  which is to be added in db.
 
 36.)Add cleanup funtion(unsubscribe()) in sidebar.js file.
+
+37.)npm i react-router-dom
+
+38.)In app.js,create the route,switch and route path tags for the chat and sidebarchat component
+
+39.)In chat.js,call useparams()hook for roomId by importing it from react-router-dom
+
+40.)In sidebarchat.js,add Link tag with path to the respective roomid by importing it from react-router-dom and move the "sidebarchat" class in the link tag.
+
+41.)In chat.js,import db from firebase.js and create a usestate hook for roomname and call it in h3-tag of "chat__headerInfo" and create a useeffeck hook that connects the db based on the roomid extracted from the useparams and set the roomname as per the name given in db(data(.name)).
