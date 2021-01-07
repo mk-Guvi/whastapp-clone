@@ -6,11 +6,12 @@ import ChatIcon from '@material-ui/icons/Chat';
 import {SearchOutlined} from '@material-ui/icons'
 import SidebarChat from "./SidebarChat";
 import './Sidebar.css' ;
+import {useStateValue} from "./StateProvider"
 import db from "./firebase";
 
  function Sidebar() {
     const [rooms,setRooms]=useState([])
-    
+    const [{user},dispatch]=useStateValue()
 
     useEffect(()=>{
             const unsubscribe=db.collection('rooms').onSnapshot(snapshot=>(//rooms=collection of the db,snapshot notes the list of elements in db and also its changes in the db
@@ -30,7 +31,7 @@ import db from "./firebase";
         <div className="sidebar">
             {/* <h1>hell siedbar</h1> */}
             <div className="sidebar__header">
-                 <Avatar/>
+                 <Avatar src={user?.photoURL}/>{/**user?. is optional chaining which means  if user is undefined dont give an error */}
                  <div className="sidebar__headerRight">
                      <IconButton><DonutLargeIcon/></IconButton>
                       <IconButton><ChatIcon/></IconButton>

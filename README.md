@@ -93,3 +93,17 @@
 Note:
 Visit firebase->authentication sector-> enable google authentication for this project
 
+47.)In index.js,wrap the app component into stateprovider(a data layer) component with initialstate and reducer props.
+
+48.)create stateprovider.js file under src and use createContext,useContext,useReducer to create the data in data layer and pull the data from the data layer.
+
+49.)create reducer.js file under src,add initial state,actiontypes and reducer-component init.
+
+50.)import reducer and initialstate from reducer.js and also import stateprovider from stateprovider.js in index.js file
+
+51.)in Login.js,use usestatevalue hook from stateprovider.js to push the user data from from to the data layer.
+
+52.)In App.js,Use usestatevalue to get the user from google by calling it as a state.
+
+53.)In sidebar.js,add the src to avatar that gets the photo of user from google by using the usestatevalue hook.
+
