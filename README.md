@@ -79,3 +79,17 @@
 40.)In sidebarchat.js,add Link tag with path to the respective roomid by importing it from react-router-dom and move the "sidebarchat" class in the link tag.
 
 41.)In chat.js,import db from firebase.js and create a usestate hook for roomname and call it in h3-tag of "chat__headerInfo" and create a useeffeck hook that connects the db based on the roomid extracted from the useparams and set the roomname as per the name given in db(data(.name)).
+
+42.)In app.js,create "user" usestate() hook and call it in a ternary operator to check if user is logged in or not.If the user is logged in redirect the user to app else redirect the user to login page.
+
+43.)create Login.js and login.css file under src and create the login functional component in login.js and import it in app.js as a component where the condition is user is not logged in.
+
+44.)In Login.js,create a div tag with classname "login" followed by another div with classname "login__container" add a image init and create the div tag with classname "login__text" where h1 tag is added and create a button of material UI in it with onclick attrubute refers to signIn function.
+
+45.)In login.css,add some styles to the div tags of login.js
+
+46.)In Login.js,In signin function use auth and provider from firebase.js file to connect the google authentication.USe then catch method to handle errors.
+
+Note:
+Visit firebase->authentication sector-> enable google authentication for this project
+
