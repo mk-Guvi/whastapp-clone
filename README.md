@@ -107,3 +107,19 @@ Visit firebase->authentication sector-> enable google authentication for this pr
 
 53.)In sidebar.js,add the src to avatar that gets the photo of user from google by using the usestatevalue hook.
 
+54.)In firebase->user's collection->create a new collection named messages  and name .message,timestamp fields init.
+
+55.)In chat.js,use usestate hook  to store the messages in an array.Access the messages created in db and use map function for getting the individual message from db and replace it in the div tag(chat__body) for the respective fields(name,message,timestamp).
+
+56.)In chat.js,use db to add the  input text by adding its respective fields init and In p-tag of chat__message change from ture to message.name===user.dispayName to make the green side as the  sender and white color for recived message.
+
+57.)In chat.js,In chat__header>p-tag change the Last seen to timestamp of last sent message to db.
+
+58.)In sidebarchat.js,add useeffect hook to get the messages from the db and use use state hook to store the last message of the room and display last message use setmessages of use state hook in the p-tag of sidebarchat__info div tag.
+
+
+59.)style the anchor tag in sidebarchat.css
+
+60.)
+
+
